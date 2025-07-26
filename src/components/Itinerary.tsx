@@ -19,7 +19,7 @@ const Itinerary = () => {
                     <img
                         src={itinerary}
                         alt="Norwegian fjords with dramatic mountains and pristine waters"
-                        className="w-full  object-cover md:rounded-2xl"
+                        className="w-full h-full object-cover md:rounded-2xl"
                     />
                 </Card>
             </div>

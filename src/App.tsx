@@ -4,6 +4,9 @@ import {Globe, Menu} from "lucide-react";
 import AskMeAnything from "@/components/AskMeAnything.tsx";
 import {InteractiveMap} from "@/components/InteractiveMap.tsx";
 import Itinerary from "@/components/Itinerary.tsx";
+import TopRecommendations from "@/components/TopRecomendation.tsx";
+import GuideInfo from "@/components/GuideInfo.tsx";
+import Questions from "@/components/Questions.tsx";
 
 function App() {
 
@@ -25,6 +28,9 @@ function App() {
         <InteractiveMap/>
         <Itinerary/>
         <div className={' bg-neutral-300 rounded-2xl h-0.5 mx-8  md:mx-24 my-8'}></div>
+        <TopRecommendations/>
+        <GuideInfo/>
+        <Questions/>
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import {useEffect, useRef} from "react";
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+import {recommendations} from "@/assets/constants.ts";
 
 
 export const InteractiveMap = () => {
@@ -18,44 +19,11 @@ export const InteractiveMap = () => {
             attribution: '© OpenStreetMap contributors'
         }).addTo(map);
 
-        // Norway locations
-        const locations = [
-            {
-                name: 'Lofoten Islands',
-                coords: [68.15, 13.99] as [number, number],
-                description: 'Dramatic peaks, pristine beaches, and traditional fishing villages in the Arctic Circle.'
-            },
-            {
-                name: 'Geiranger Fjord',
-                coords: [62.1, 7.2] as [number, number],
-                description: 'UNESCO World Heritage site with spectacular waterfalls and steep cliffs.'
-            },
-            {
-                name: 'Nærøyfjord',
-                coords: [60.9, 6.7] as [number, number],
-                description: 'One of the narrowest fjords in the world, surrounded by towering mountains.'
-            },
-            {
-                name: 'Preikestolen',
-                coords: [58.99, 6.19] as [number, number],
-                description: 'Famous cliff plateau offering breathtaking views over Lysefjord.'
-            },
-            {
-                name: 'Trolltunga',
-                coords: [60.12, 6.74] as [number, number],
-                description: 'Iconic rock formation protruding horizontally from a mountain.'
-            },
-            {
-                name: 'Flåm',
-                coords: [60.86, 7.11] as [number, number],
-                description: 'Starting point for the scenic Flåm Railway through stunning mountain scenery.'
-            }
-        ];
 
         // Add markers
-        locations.forEach(location => {
+        recommendations.forEach(location => {
             const marker = L.marker(location.coords).addTo(map);
-            marker.bindPopup(`<strong>${location.name}</strong><br>${location.description}`);
+            marker.bindPopup(`<strong>${location.title}</strong><br>${location.description}`);
         });
 
         mapInstanceRef.current = map;

@@ -1,4 +1,3 @@
-
 import hero from "../assets/hero.png"
 import avatar from "../assets/avatar.png"
 import { Button } from "./ui/button"
