@@ -57,11 +57,11 @@ const HeroSection = () => {
 
 
                     <div className="flex flex-row gap-4 justify-center items-start ">
-                        <Button variant="outline" size="lg" className="w-[48%] py-6 border border-neutral-500">
+                        <Button variant="outline" size="lg" className="w-[48%] py-6 border border-neutral-500 cursor-pointer">
                             Preview
                         </Button>
                         <div className={'flex flex-col items-center gap-1 w-[48%] '}>
-                            <Button size="lg" className="bg-primary text-primary-foreground py-6 hover:bg-primary/90 w-full ">
+                            <Button size="lg" className="bg-gradient-to-r from-primary to-cyan-800 text-primary-foreground py-6 cursor-pointer w-full ">
                                 Get Access
                             </Button>
                             <p className="text-sm text-muted-foreground font-medium ">
